@@ -1,0 +1,58 @@
+{% extends "/admin/admin-master.html" %}
+{% block body %}
+<div class="main">
+            <div class="row">
+               <div class="col">
+                  <ol class="breadcrumb">
+                     <li class="breadcrumb-item"><a href="#"><i class="ti-home"></i> Dashboard</a></li>
+                     <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                     <li class="breadcrumb-item active">Form Control</li>
+                  </ol>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="card mb-3">
+                     {% for category, message in get_flashed_messages(with_categories=true) %}
+                            <p class="{{ category }}" style="color: white;background: #009000;text-align: center;padding: 10px;">{{ message }}</p>
+                  {% endfor %}
+                     <form role="form" action="/admin/add-blog/0" method="post">
+                        <div class="card-header uppercase">
+                           <div class="caption"><i class="ti-briefcase"></i> Add Post</div>
+                           
+                        </div>
+                        <div class="card-body">
+                           <div class="form-group">
+                           	<label>Title</label> 
+                           	<input class="form-control" id="title" name="title" placeholder="Title" required="required">
+                           </div>
+
+                           <div class="form-group">
+                           	<label>Content</label> 
+                           	<textarea class="form-control" rows="6" name="content" id="content" required="required"></textarea>
+                           </div>
+
+                           <div class="form-group">
+                           	<label>Slug</label> 
+                           	<input class="form-control" id="slug" name="slug" placeholder="Slug" required="required">
+                           </div>
+                           <div class="form-group">
+                              <label>POsted By</label> 
+                              <input class="form-control" id="posted_by" name="posted_by" placeholder="posted By">
+                           </div>
+
+                           <div class="form-group">
+                           	<label>Image File</label> 
+                           	<input class="form-control" id="img_file" name="img_file">
+                           </div>                         
+                        </div>
+
+                        <div class="card-footer text-right">
+                        	<button type="submit" class="btn btn-success"><i class="ti-face-smile"></i>Submit</button>
+                        	<a href="#" class="btn btn-flat btn-secondary"><i class="ti-face-sad"></i> Cancel</a></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+  {% endblock %}

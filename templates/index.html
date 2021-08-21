@@ -1,0 +1,171 @@
+
+{% extends "layout.html" %}
+{% block body %}
+    <!--====== BINDUZ VIDEO POST 4 PART START ======-->
+
+    <section class="binduz-er-video-post-4-area home-12-video-post pt-60">
+        <div class=" container">
+            <div class="row">
+                <div class=" col-lg-9">
+
+                    <div class="binduz-er-recent-news-box">
+                        <div class="binduz-er-recent-news-title">
+                            <h3 class="binduz-er-title">Recent Blogs</h3>
+                        </div>
+                        
+                        {% for post in posts %}	 
+                        {% set imgfile='assets/images/' + post.img_file %}  
+                        <div class="binduz-er-recent-news-item mb-20">
+                            <div class="binduz-er-thumb">
+                                <img src="{{url_for('static',filename=imgfile) }}" alt="">
+                            </div>
+                            <div class="binduz-er-content">
+                                <div class="binduz-er-meta-item">
+                                    <div class="binduz-er-meta-categories">
+                                        <a href="#">Technology</a>
+                                    </div>
+                                    <div class="binduz-er-meta-date">
+                                        <span><i class="fal fa-calendar-alt"></i> {{post.date}}</span>
+                                    </div>
+                                </div>
+                                <h5 class="binduz-er-title"><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h5>
+                                <p>{{post.content[0:150]}}...</p>
+                            </div>
+                        </div>
+						{% endfor %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="{{prev}}" aria-label="Previous">
+                                        <span aria-hidden="true">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="{{next}}" aria-label="Next">
+                                        <span aria-hidden="true">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <div class="binduz-er-video-post-sidebar">
+                        <div class="binduz-er-social-box">
+                            <div class="binduz-er-social-title">
+                                <h4 class="binduz-er-title">Social Connects</h4>
+                            </div>
+                            <div class="binduz-er-social-list">
+                                <ul>
+                                    <li><a href="{{parameter['fb_url']}}" target="_blank"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a></li>
+                                    <li><a href="{{parameter['linked_url']}}" target="_blank"><i class="fab fa-linkedin"></i> <span>Linkedin</span></a></li>
+                                    <li><a href="{{parameter['insta_url']}}" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i> <span>Youtube</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="binduz-er-populer-news-sidebar-post pt-30 binduz-er-most-populer-post-box">
+                            <div class="binduz-er-popular-news-title">
+                                <ul class="nav nav-pills mb-3" id="pills-tab-2" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Most Popular</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Most Recent</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent-3">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="binduz-er-sidebar-latest-post-box">
+                                        <div class="binduz-er-sidebar-latest-post-item">
+                                            <div class="binduz-er-thumb">
+                                                <img src="assets/images/latest-post-1.jpg" alt="latest">
+                                            </div>
+                                            <div class="binduz-er-content">
+                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                <h4 class="binduz-er-title"><a href="#">Join us for our first virtual Web Stories</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="binduz-er-sidebar-latest-post-item">
+                                            <div class="binduz-er-thumb">
+                                                <img src="assets/images/latest-post-2.jpg" alt="latest">
+                                            </div>
+                                            <div class="binduz-er-content">
+                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                <h4 class="binduz-er-title"><a href="#">Google News Showcase is launching in Czechia</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="binduz-er-sidebar-latest-post-item">
+                                            <div class="binduz-er-thumb">
+                                                <img src="assets/images/latest-post-3.jpg" alt="latest">
+                                            </div>
+                                            <div class="binduz-er-content">
+                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                <h4 class="binduz-er-title"><a href="#">Get ready for Hollywood’s big night</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <div class="binduz-er-sidebar-latest-post-box">
+                                        <div class="binduz-er-sidebar-latest-post-item">
+                                            <div class="binduz-er-thumb">
+                                                <img src="assets/images/latest-post-1.jpg" alt="latest">
+                                            </div>
+                                            <div class="binduz-er-content">
+                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                <h4 class="binduz-er-title"><a href="#">Join us for our first virtual Web Stories</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="binduz-er-sidebar-latest-post-item">
+                                            <div class="binduz-er-thumb">
+                                                <img src="assets/images/latest-post-2.jpg" alt="latest">
+                                            </div>
+                                            <div class="binduz-er-content">
+                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                <h4 class="binduz-er-title"><a href="#">Google News Showcase is launching in Czechia</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="binduz-er-sidebar-latest-post-item">
+                                            <div class="binduz-er-thumb">
+                                                <img src="assets/images/latest-post-3.jpg" alt="latest">
+                                            </div>
+                                            <div class="binduz-er-content">
+                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                <h4 class="binduz-er-title"><a href="#">Get ready for Hollywood’s big night</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="binduz-er-add-box mt-40">
+                            <img src="assets/images/add-thumb-2.jpg" alt="">
+                        </div>
+                        <div class="binduz-er-populer-news-sidebar-newsletter mt-40">
+                            <div class="binduz-er-newsletter-box text-center">
+                                <img src="assets/images/icon/icon-3.png" alt="">
+                                <h3 class="binduz-er-title">Get Every Newsletter</h3>
+                                <p>We are not gonna make spamming</p>
+                                <div class="binduz-er-input-box">
+                                    <input type="text" placeholder="Enter your email">
+                                    <button><i class="fal fa-long-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="binduz-er-sidebar-social binduz-er-populer-news-sidebar-add d-none d-lg-block">
+                            <div class="binduz-er-sidebar-add mt-40">
+                                <h3 class="binduz-er-title">Build your website & <span>grow your business</span></h3>
+                                <a class="binduz-er-main-btn" href="#">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== BINDUZ VIDEO POST 4 PART ENDS ======-->
+
+{% endblock %}

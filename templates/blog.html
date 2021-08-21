@@ -1,0 +1,162 @@
+
+{% extends "layout.html" %}
+{% block body %}
+    <div class="binduz-er-breadcrumb-area">
+        <div class=" container">
+            <div class="row">
+                <div class=" col-lg-12">
+                    <div class="binduz-er-breadcrumb-box">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--====== BINDUZ HEADER PART ENDS ======-->
+
+    <!--====== BINDUZ AUTHOR USER PART START ======-->
+        {% set imgfile = 'assets/images/' + post.img_file %}
+    <section class="binduz-er-author-item-area pb-20">
+        <div class=" container">
+            <div class="row">
+                <div class=" col-lg-9">
+                    <div class="binduz-er-author-item mb-40">
+                        <div class="binduz-er-thumb">
+                            <img src="{{url_for('static',filename=imgfile) }}" alt="">
+                        </div>
+                        <div class="binduz-er-content">
+                            <div class="binduz-er-meta-item">
+                                <div class="binduz-er-meta-categories">
+                                    <a href="#">Technology</a>
+                                </div>
+                                <div class="binduz-er-meta-date">
+                                    <span><i class="fal fa-calendar-alt"></i>{{post.date}}</span>
+                                </div>
+                            </div>
+                            <h3 class="binduz-er-title">{{post.title}}</h3>
+                            <div class="binduz-er-meta-author">
+                                <div class="binduz-er-author">
+                                    <img src="assets/images/user-2.jpg" alt="">
+                                    <span>By <span>{{post.posted_by}}</span></span>
+                                </div>
+                                <!-- <div class="binduz-er-meta-list">
+                                    <ul>
+                                        <li><i class="fal fa-eye"></i> 5k</li>
+                                        <li><i class="fal fa-heart"></i> 5k</li>
+                                        <li><i class="fal fa-comments"></i> 5k</li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="binduz-er-blog-details-box">
+                            <div class="binduz-er-text">
+                                <p>{{post.content}}</p>
+                            </div>
+                            <div class="row">
+                                <div class=" col-lg-6">
+                                    <div class="binduz-er-blog-details-thumb mt-25">
+                                        <img src="assets/images/blog-details-thumb-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class=" col-lg-6">
+                                    <div class="binduz-er-blog-details-thumb mt-25">
+                                        <img src="assets/images/blog-details-thumb-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+     
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <div class="binduz-er-populer-news-sidebar">   
+                        <div class="binduz-er-populer-news-sidebar-newsletter binduz-er-author-page-newsletter mt-40">
+                            <div class="binduz-er-newsletter-box text-center">
+                                <img src="assets/images/icon/icon-3.png" alt="">
+                                <h3 class="binduz-er-title">Get Every Newsletter</h3>
+                                <p>We are not gonna make spamming</p>
+                                <div class="binduz-er-input-box">
+                                    <input type="text" placeholder="Enter your email">
+                                    <button><i class="fal fa-long-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="binduz-er-populer-news-social binduz-er-author-page-social mt-40">
+                            <div class="binduz-er-popular-news-title">
+                                <h3 class="binduz-er-title">Social Connects</h3>
+                            </div>
+                            <div class="binduz-er-social-list">
+                                <div class="binduz-er-list">
+                                    <a href="#">
+                                        <span><i class="fab fa-facebook-f"></i> <span>15000</span> Likes</span>
+                                        <span>Like</span>
+                                    </a>
+                                    <a href="#">
+                                        <span><i class="fab fa-twitter"></i> <span>15000</span> Likes</span>
+                                        <span>Tweet</span>
+                                    </a>
+                                    <a href="#">
+                                        <span><i class="fab fa-behance"></i> <span>5k+</span> Follower</span>
+                                        <span>Follow</span>
+                                    </a>
+                                    <a href="#">
+                                        <span><i class="fab fa-youtube"></i> <span>15000</span> Subscribe</span>
+                                        <span>Subscribe</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="binduz-er-populer-news-social binduz-er-author-page-social mt-40">
+                            <div class="binduz-er-popular-news-title">
+                                <h3 class="binduz-er-title">Video Post</h3>
+                            </div>
+                            <div class="binduz-er-video-post binduz-er-recently-viewed-item">
+                                <div class="binduz-er-latest-news-item">
+                                    <div class="binduz-er-thumb">
+                                        <img src="assets/images/editors-pack-thumb-1.jpg" alt="">
+                                        <div class="binduz-er-play">
+                                            <a href="#"><i class="fas fa-play"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="binduz-er-content">
+                                        <div class="binduz-er-meta-item">
+                                            <div class="binduz-er-meta-categories">
+                                                <a href="#">Technology</a>
+                                            </div>
+                                            <div class="binduz-er-meta-date">
+                                                <span><i class="fal fa-calendar-alt"></i>24th February 2020</span>
+                                            </div>
+                                        </div>
+                                        <h5 class="binduz-er-title"><a href="#">Nearly three weeks after Rita Ora and Chris Brown released their collaboration, “Body On Me,”</a></h5>
+                                        <div class="binduz-er-meta-author">
+                                            <span>By <span>Rosalina D.</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="binduz-er-sidebar-social binduz-er-populer-news-sidebar-add d-none d-lg-block">
+                            <div class="binduz-er-sidebar-add mt-40">
+                                <h3 class="binduz-er-title">Build your website & <span>grow your business</span></h3>
+                                <a class="binduz-er-main-btn" href="#">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== BINDUZ AUTHOR USER PART ENDS ======-->
+{% endblock %}

@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport"/>
+      <meta name="viewport" content="width=device-width"/>
+      <meta name="description" content="#"/>
+      <meta name="keywords" content="#"/>
+      <meta name="author" content="#"/>
+      <title>{{parameter['site_title']}}</title>
+      <link rel="stylesheet" href="{{url_for('static',filename='admin-assets/css/siqtheme.css')}}">
+      <link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static',filename='admin-assets/img/apple-icon.png')}}">
+      <link rel="icon" type="image/png" sizes="96x96" href="{{url_for('static',filename='assets/images/favicon.ico')}}">
+      <link rel="stylesheet" href="{{url_for('static',filename='admin-assets/css/pages/dashboard1.css')}}">
+   </head>
+   <body class="theme-dark">
+      <div class="grid-wrapper sidebar-bg bg1">
+         <div class="header">
+            <div class="header-bar">
+               <div class="brand"><a href="index.html" class="logo"><span class="text-carolina">{{parameter['site_name']}}</span></a> <a href="index.html" class="logo-sm text-carolina" style="display: none;">siQ</a></div>
+               <div class="btn-toggle"><a href="#" class="slide-sidebar-btn" style="display: none;"><i class="ti-menu"></i></a></div>
+               <div class="navigation d-flex">
+                  <form class="navbar-search" role="search" method="post" action="#">
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <div class="input-group-text"><i class="ti-search"></i></div>
+                        </div>
+                        <input placeholder="Search for keywords" class="form-control" name="top-search" id="top-search">
+                     </div>
+                  </form>
+                  <div class="navbar-menu d-flex">
+                     <div class="menu-item"><a href="#" class="btn right-sidebar-toggle"><i class="ti-user"></i></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+               <div class="sidebar-menu">
+                  <ul>
+                     <li class="header-menu">Categories</li>
+                     <li class="active"><a href="/admin/dashboard"><i class="ti-dashboard"></i> <span class="menu-text">Dashboard</span></a></li>
+                     <li><a href="/admin/logout"><i class="ti-dashboard"></i> <span class="menu-text">Logout</span></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+
+
+{% block body %}   {% endblock %}
+
+
+
+         <div class="footer">
+            <p class="text-center">Copyright © 2019-2020 siQtheme by <a href="https://siquang.com/" target="_blank">3M Square</a>. All rights reserved.</p>
+         </div>
+         <div id="preloader"></div>
+      </div>
+      <script src="{{url_for('static',filename='admin-assets/scripts/siqtheme.js')}}"></script>
+      <script src="{{url_for('static',filename='admin-assets/scripts/pages/dashboard1.js')}}"></script>
+   </body>
+</html>
