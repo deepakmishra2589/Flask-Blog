@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_url": "mysql+mysqldb://root:@localhost/flask-blog",
+    "prod_url": "mysql+mysqldb://lovaanil_blog:Myblog@2021@localhost/lovaanil_blog",
+    "fb_url": "https://www.facebook.com/MISSHRADEEPAK/",
+    "insta_url": "https://www.instagram.com/9137deepak/",
+    "linked_url": "https://www.linkedin.com/in/deepak-mishra2589/",
+    "office_add": "203-207 D-block central market prashant vihar delhi 110042",
+    "office_number": "+91-9354669433",
+    "office_email": "stegitsolutions2018@gmail.com",
+    "copyright": "Steg IT Solutions",
+    "gmail_username": "#",
+    "gmail_password": "#",
+    "no_of_posts": 5,
+    "site_name": "Blog Site",
+    "site_title": "Blog Site",
+    "admin_user": "admin",
+    "admin_password": "password"
+  }
+}
