@@ -3,7 +3,7 @@
   {
     "local_server":"True",
     "local_url": "mysql+mysqldb://root:@localhost/flask-blog",
-    "prod_url": "mysql+mysqldb://lovaanil_blog:Myblog@2021@localhost/lovaanil_blog",
+    "prod_url": "mysql+mysqldb://root:@localhost/flask-blog",
     "fb_url": "https://www.facebook.com/MISSHRADEEPAK/",
     "insta_url": "https://www.instagram.com/9137deepak/",
     "linked_url": "https://www.linkedin.com/in/deepak-mishra2589/",
